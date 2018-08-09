@@ -1,24 +1,42 @@
 package br.com.restEstetica.entity;
 
-public class Usuario {
+import java.io.Serializable;
+
+public class Usuario implements Serializable {
 	
-	private Integer idUsuario;
-	private Integer idFuncionario;
-	private Integer idCliente;
-	private String Login;
-	private String senha;
+	
+	private static final long serialVersionUID = 1L;
+	private Integer idUsuario = 0;
+	private String login = "";
+	private String senha = "";
+	private Integer idCliente = 0;
+	private Integer idProfissional = 0;
+	private String apelido = "";
 	private Perfil perfil;
+	
 	
 	public Usuario() {
 		
 	}
 
-	public Usuario(Integer idUsuario, String login, String senha, Perfil perfil) {
-		super();
+	public Usuario(Integer idUsuario, String login, String senha,Integer idCliente,
+			Integer idProfissional,String apelido,Perfil perfil) {
+		
 		this.idUsuario = idUsuario;
-		Login = login;
+		this.login = login;
 		this.senha = senha;
 		this.perfil = perfil;
+		this.idCliente = idCliente;
+		this.idProfissional = idProfissional;
+		this.apelido = apelido;
+	}
+	
+	
+
+	@Override
+	public String toString() {
+		return "Usuario [idUsuario=" + idUsuario + ", login=" + login + ", senha=" + senha +
+				",perfil=" + perfil + "]";
 	}
 
 	public Integer getIdUsuario() {
@@ -30,11 +48,11 @@ public class Usuario {
 	}
 
 	public String getLogin() {
-		return Login;
+		return login;
 	}
 
 	public void setLogin(String login) {
-		Login = login;
+		this.login = login;
 	}
 
 	public String getSenha() {
@@ -47,6 +65,36 @@ public class Usuario {
 
 	public Perfil getPerfil() {
 		return perfil;
+	}
+	
+	
+
+	public Integer getIdCliente() {
+		return idCliente;
+	}
+
+	public void setIdCliente(Integer idCliente) {
+		this.idCliente = idCliente;
+	}
+
+	public Integer getIdProfissional() {
+		return idProfissional;
+	}
+
+	public void setIdProfissional(Integer idProfissional) {
+		this.idProfissional = idProfissional;
+	}
+
+	public String getApelido() {
+		return apelido;
+	}
+
+	public void setApelido(String apelido) {
+		this.apelido = apelido;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
 
 	public void setPerfil(Perfil perfil) {

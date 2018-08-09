@@ -8,6 +8,8 @@ public class Perfil implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private Integer idPerfil;
 	private String nome;
+	private String apelido;
+	
 	
 	
 	public Perfil(Integer idPerfil, String nome) {
