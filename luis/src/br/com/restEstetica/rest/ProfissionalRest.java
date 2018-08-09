@@ -12,11 +12,12 @@ import br.com.restEstetica.persistence.ProfissionalDao;
 
 @Path("/profissional")
 public class ProfissionalRest {
+
 	
+@GET	
 @Path("/listar")
 //@Produces(MediaType.APPLICATION_JSON)
 @Produces("Application/json")
-@GET
 public String listar() {
 	
 	try {

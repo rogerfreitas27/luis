@@ -12,10 +12,9 @@ import br.com.restEstetica.persistence.ClienteDao;
 public class ClienteRest {
 	
 	
-	
+@GET	
 @Path("/listar")
-@Produces("ApplicationJson")
-@GET
+@Produces("Application/json")
 public String listar() {
 	try {
 	return  (new Gson().toJson(new ClienteDao().buscarTodos()));

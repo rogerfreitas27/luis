@@ -16,10 +16,11 @@ public class ServicoRest {
 	
 	
 	@GET
-	@Produces(MediaType.APPLICATION_JSON)
+	@Produces("Application/json")
 	@Path("/listar")
 	public String buscarTodos() {
 		try{
+			//System.out.println("teste");
 			return (new Gson().toJson( new ServicoDao().buscarTodos()));
 			
 			
